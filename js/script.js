@@ -18,26 +18,65 @@
   const modalTitle = document.querySelector('[data-modal-title]');
   const modalMeta = document.querySelector('[data-modal-meta]');
   const modalScript = document.querySelector('[data-modal-script]');
+  const videoStage = document.querySelector('.video-stage');
+  const videoPlaceholder = document.querySelector('.video-placeholder');
   let lastTrigger = null;
+
+  const videoSources = document.querySelector('.cloud-grid')
+    ? ['vocab-student-01.mp4', 'vocab-student-02.mp4', 'vocab-student-03.mp4', 'vocab-student-04.mp4', 'vocab-student-05.mp4', 'vocab-student-06.mp4']
+    : document.querySelector('.conversation-list')
+      ? ['dialogue-roleplay-01-airport.mp4', 'dialogue-roleplay-02-places.mp4', 'dialogue-roleplay-03-campus.mp4']
+      : [];
+
+  function setModalVideo(filename) {
+    if (!videoStage) return;
+    let player = videoStage.querySelector('.media-player');
+    if (!player) {
+      player = document.createElement('video');
+      player.className = 'media-player';
+      player.controls = true;
+      player.playsInline = true;
+      player.preload = 'metadata';
+      videoStage.append(player);
+    }
+    player.pause();
+    player.hidden = true;
+    if (videoPlaceholder) videoPlaceholder.hidden = false;
+    player.oncanplay = () => {
+      player.hidden = false;
+      if (videoPlaceholder) videoPlaceholder.hidden = true;
+    };
+    player.onerror = () => {
+      player.hidden = true;
+      if (videoPlaceholder) videoPlaceholder.hidden = false;
+    };
+    player.src = `videos/${filename}`;
+    player.load();
+  }
 
   function closeModal() {
     if (!modal) return;
+    modal.querySelector('.media-player')?.pause();
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     lastTrigger?.focus();
   }
 
-  document.querySelectorAll('[data-video]').forEach(button => {
+  document.querySelectorAll('[data-video]').forEach((button, index) => {
+    if (videoSources[index]) button.dataset.videoSrc = videoSources[index];
     button.addEventListener('click', () => {
       if (!modal) return;
       lastTrigger = button;
       const { word, romanization, meaning, sentence, translation, members, title } = button.dataset;
       modalTitle.textContent = title || `${word} · ${meaning}`;
       modalMeta.textContent = members || `${romanization} · ${meaning}`;
+      const videoFile = button.dataset.videoSrc;
+      setModalVideo(videoFile);
       modalScript.innerHTML = sentence
         ? `<strong>Suggested line:</strong> ${sentence}<br><span>${translation}</span>`
         : '<strong>Student video slot</strong> Add the group’s recorded face-to-face Korean dialogue here.';
+      modalScript.innerHTML += `<br><span>Expected file: videos/${videoFile}</span>`;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
