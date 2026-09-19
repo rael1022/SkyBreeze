@@ -74,6 +74,7 @@
       const { word, romanization, meaning, members, title } = button.dataset;
       modalTitle.textContent = title || `${word} · ${meaning}`;
       modalMeta.textContent = members || `${romanization} · ${meaning}`;
+      modalMeta.hidden = Boolean(title && document.querySelector('.cloud-grid'));
       const videoFile = button.dataset.videoSrc;
       setModalVideo(videoFile);
       modal.classList.add('open');
