@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SkyBreeze logo">
+  <defs>
+    <linearGradient id="sky" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#93dcfa"/>
+      <stop offset="1" stop-color="#a995f4"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#sky)"/>
+  <path d="M16 39.5c0-4.4 3.5-7.9 7.8-7.9 1.8 0 3.5.6 4.8 1.7 1.5-4.7 5.8-8.1 10.9-8.1 6.3 0 11.5 5.1 11.5 11.5 0 .8-.1 1.6-.2 2.3 2.1.9 3.6 3 3.6 5.4 0 3.3-2.7 6-6 6H22c-3.3 0-6-2.7-6-6 0-1.9.9-3.7 2.3-4.8-1.4 0-2.3 0-2.3-.1Z" fill="#fff" fill-opacity=".94"/>
+  <path d="m27 23 19 7.4-8.5 3.4-3.4 8.5L27 23Zm9.5 11 3.1-1.2-9-3.5 3.5 9 1.2-3.1 5.4 5.4 1.4-1.4-5.6-5.2Z" fill="#245a99"/>
+</svg>
