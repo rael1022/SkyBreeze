@@ -1,18 +1,18 @@
 (() => {
   const rolePlays = [
     {
-      label: 'Role Play 01 · Airport Journey',
-      title: 'Meeting a friend at the airport',
+      label: 'Role Play 01 · Welcome to Malaysia',
+      title: 'A friend visits Malaysia',
       members: 'Yong Soon & Bing Sheng',
       lines: [
-        ['A', '안녕하세요, 용순 씨. 오늘 어디에 가요?', 'Hello, Yong Soon. Where are you going today?'],
-        ['B', '안녕하세요, 빙셩 씨. 저는 공항에 가요. 한국에 오는 친구를 마중하러 가요.', 'Hello, Bing Sheng. I am going to the airport to meet a friend who is coming to Korea.'],
-        ['A', '아, 정말요? 친구가 어느 나라에서 와요?', 'Oh, really? Which country is your friend coming from?'],
-        ['B', '제 친구는 말레이시아에서 와요. 오늘 오후 세 시에 공항에 도착해요.', 'My friend is coming from Malaysia. They arrive at the airport at three this afternoon.'],
-        ['A', '공항까지 어떻게 가요? 버스를 타고 가요, 아니면 택시를 타고 가요?', 'How are you going to the airport? Are you taking a bus or a taxi?'],
-        ['B', '짐이 많아서 택시를 타고 가요. 공항에서 친구와 저녁도 먹을 거예요.', 'We have a lot of luggage, so I am taking a taxi. We will also have dinner at the airport.'],
-        ['A', '좋아요. 친구를 만나면 저에게 사진도 보여 주세요.', 'That sounds nice. Please show me photos when you meet your friend.'],
-        ['B', '네, 알겠어요. 다음 주에 친구와 함께 다시 만나요.', 'Sure. Let’s meet again with my friend next week.'],
+        ['A', '안녕하세요, 용순 씨. 오늘 공항에 가요?', 'Hello, Yong Soon. Are you going to the airport today?'],
+        ['B', '네, 빙셩 씨. 한국에서 친구가 말레이시아에 와요.', 'Yes, Bing Sheng. My friend is coming to Malaysia from Korea.'],
+        ['A', '정말요? 친구는 언제 도착해요?', 'Really? When does your friend arrive?'],
+        ['B', '오늘 오후 세 시에 쿠알라룸푸르 공항에 도착해요.', 'They arrive at Kuala Lumpur Airport at three this afternoon.'],
+        ['A', '공항에서 친구와 무엇을 할 거예요?', 'What will you do with your friend at the airport?'],
+        ['B', '먼저 친구를 만나고, 같이 택시를 타고 호텔에 갈 거예요.', 'First, I will meet my friend and we will take a taxi to the hotel together.'],
+        ['A', '저녁에는 말레이시아 음식을 먹어요?', 'Will you eat Malaysian food for dinner?'],
+        ['B', '네, 나시르막을 먹고 페트로나스 타워도 보여 줄 거예요.', 'Yes, we will eat nasi lemak and I will show my friend the Petronas Towers too.'],
       ],
     },
     {
