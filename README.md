@@ -1,5 +1,7 @@
 # SkyBreeze: A Korean Learning Journey
 
+![SkyBreeze logo](images/skybreeze-logo.svg)
+
 SkyBreeze is a beginner-friendly, multi-page Korean learning website created for **LMPU3282 Korean for Beginners**. Its sky-and-travel theme turns Lesson 4 place vocabulary, grammar, quizzes and role-play conversations into a light interactive learning journey.
 
 ## About
@@ -35,13 +37,6 @@ SkyBreeze helps learners practise practical Korean for asking where places are a
 ## Run locally
 
 No installation or build process is needed. Open `index.html` in a browser, or use a local static-server extension such as Live Server in VS Code.
-
-## Before submission
-
-1. Replace `Member 1` to `Member 6` and the student-ID placeholders in `crew.html` with the group’s actual details.
-2. Add the team’s recorded face-and-voice vocabulary and role-play videos to the `videos/` folder, then connect them to the video slots as needed.
-3. Test the Wayground QR code and quiz link on a phone or browser.
-4. Check all pages at desktop and mobile widths.
 
 ## Built with
 
