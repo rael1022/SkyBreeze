@@ -16,7 +16,7 @@ SkyBreeze helps learners practise practical Korean for asking where places are a
 - Grammar patterns for `N에 가요 / 와요` and `N에 있어요 / 없어요`, plus visual location-word diagrams.
 - Interactive Practice Sky quiz with feedback, score counter, restart button and flip flashcards.
 - Local Wayground Quizzes QR code and direct activity link.
-- Three Korean role-play dialogues, each with three speakers, six Korean lines and English translations.
+- Three Korean role-play dialogues: two with two speakers and one with three speakers; each has eight Korean lines and English translations.
 - Video modal slots for student face-and-voice recordings.
 - Responsive layout and reduced-motion support.
 

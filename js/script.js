@@ -22,6 +22,9 @@
   const videoPlaceholder = document.querySelector('.video-placeholder');
   let lastTrigger = null;
 
+  modalScript?.remove();
+  videoPlaceholder?.querySelector('p')?.remove();
+
   const videoSources = document.querySelector('.cloud-grid')
     ? ['vocab-student-01.mp4', 'vocab-student-02.mp4', 'vocab-student-03.mp4', 'vocab-student-04.mp4', 'vocab-student-05.mp4', 'vocab-student-06.mp4']
     : document.querySelector('.conversation-list')
@@ -68,15 +71,11 @@
     button.addEventListener('click', () => {
       if (!modal) return;
       lastTrigger = button;
-      const { word, romanization, meaning, sentence, translation, members, title } = button.dataset;
+      const { word, romanization, meaning, members, title } = button.dataset;
       modalTitle.textContent = title || `${word} · ${meaning}`;
       modalMeta.textContent = members || `${romanization} · ${meaning}`;
       const videoFile = button.dataset.videoSrc;
       setModalVideo(videoFile);
-      modalScript.innerHTML = sentence
-        ? `<strong>Suggested line:</strong> ${sentence}<br><span>${translation}</span>`
-        : '<strong>Student video slot</strong> Add the group’s recorded face-to-face Korean dialogue here.';
-      modalScript.innerHTML += `<br><span>Expected file: videos/${videoFile}</span>`;
       modal.classList.add('open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';

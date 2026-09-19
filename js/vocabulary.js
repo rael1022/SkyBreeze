@@ -15,6 +15,8 @@
     card.querySelector('.vocab-word + .romanization').textContent = set[1];
   });
 
+  document.querySelector('.media-note')?.remove();
+
   const contextualSentences = {
     공항: ['공항에 친구를 마중하러 가요.', 'I go to the airport to meet a friend.'],
     우체국: ['우체국에 편지를 부치러 가요.', 'I go to the post office to mail a letter.'],
