@@ -1,6 +1,4 @@
-# SkyBreeze: A Korean Learning Journey
-
-![SkyBreeze logo](images/skybreeze-logo.svg)
+<h1><img src="images/skybreeze-logo.svg" width="38" height="38" alt="SkyBreeze logo"> SkyBreeze: A Korean Learning Journey</h1>
 
 SkyBreeze is a beginner-friendly, multi-page Korean learning website created for **LMPU3282 Korean for Beginners**. Its sky-and-travel theme turns Lesson 4 place vocabulary, grammar, quizzes and role-play conversations into a light interactive learning journey.
 
