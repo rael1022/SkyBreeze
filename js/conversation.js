@@ -20,7 +20,7 @@
       title: 'Looking for the hospital',
       members: 'Yong Soon & Wen Khang',
       lines: [
-        ['ys', '실례합니다. 병원이 어디에 있어요?', 'ys:Excuse me. Where is the hospital?'],
+        ['ys', '실례합니다. 병원이 어디에 있어요?', 'ys: Excuse me. Where is the hospital?'],
         ['wk', '병원은 은행 옆에 있어요.', 'wk: The hospital is beside the bank.'],
         ['ys', '여기에서 멀어요? 걸어서 갈 수 있어요?', 'ys: Is it far from here? Can I walk there?'],
         ['wk', '아니요, 가까워요. 걸어서 십 분 정도 걸려요.', 'wk: No, it is close. It takes about ten minutes on foot.'],
@@ -31,17 +31,17 @@
       ],
     },
     {
-      label: 'Role Play 03 · Campus Location',
-      title: 'Study, then visit a cafe',
+      label: 'Role Play 03 · Bookstore Location',
+      title: 'Buy books, then visit a cafe',
       members: 'Tze Xi & Joseph & Kong Wei',
       lines: [
-        ['tx', '안녕하세요. 도서관이 어디에 있어요?', 'tx: Hello. Where is the library?'],
-        ['Joseph', '학생식당 앞에 있어요. 큰 건물이라서 쉽게 찾을 수 있어요.', 'Joseph: It is in front of the student cafeteria. It is a large building, so you can find it easily.'],
-        ['kw', '도서관에서 한국어를 공부해요?', 'kw: Do you study Korean at the library?'],
-        ['tx', '네, 저는 친구와 같이 한국어를 공부하고 책도 읽어요.', 'tx: Yes, I study Korean with a friend and read books too.'],
-        ['Joseph', '저는 한국어 책을 빌리고 싶어요. 한국어 책이 많아요?', 'Joseph: I want to borrow a Korean book. Are there many Korean books?'],
+        ['tx', '안녕하세요. 서점이 어디에 있어요?', 'tx: Hello. Where is the bookstore?'],
+        ['Joseph', '은행 옆에 있어요. 큰 건물이라서 쉽게 찾을 수 있어요.', 'Joseph: It is beside the bank. It is a large building, so you can find it easily.'],
+        ['kw', '서점에서 무엇을 할 거예요?', 'kw: What are you going to do at the bookstore?'],
+        ['tx', '저는 친구와 같이 책을 보고 한국어 책도 살 거예요.', 'tx: I am going to look at books with my friend and buy a Korean book too.'],
+        ['Joseph', '저도 한국어 책을 사고 싶어요. 한국어 책이 많아요?', 'Joseph: I want to buy a Korean book too. Are there many Korean books?'],
         ['kw', '네, 이 층에 한국어 책이 많이 있어요. 같이 찾아봐요.', 'kw: Yes, there are many Korean books on this floor. Let’s look for them together.'],
-        ['tx', '공부한 후에 도서관 옆 카페에 가요?', 'tx: Shall we go to the cafe beside the library after studying?'],
+        ['tx', '책을 산 후에 서점 옆 카페에 가요?', 'tx: Shall we go to the cafe beside the bookstore after buying the books?'],
         ['Joseph', '좋아요. 카페에서 커피를 마시면서 오늘 수업 이야기를 해요.', 'Joseph: Great. Let’s drink coffee at the cafe and talk about today’s class.'],
       ],
     },
@@ -51,6 +51,19 @@
   rolePlays.forEach((rolePlay, index) => {
     const card = cards[index];
     if (!card) return;
+    if (index === 1) {
+      const scene = card.querySelector('.scene-card');
+      if (scene) {
+        scene.textContent = '\u{1F3E5}';
+        scene.setAttribute('aria-label', 'Hospital scene');
+      }
+    } else if (index === 2) {
+      const scene = card.querySelector('.scene-card');
+      if (scene) {
+        scene.textContent = '\u{1F4DA}';
+        scene.setAttribute('aria-label', 'Bookstore scene');
+      }
+    }
     card.querySelector('.video-kicker').textContent = rolePlay.label;
     card.querySelector('h2').textContent = rolePlay.title;
     const bubbles = card.querySelector('.dialogue-bubbles');
