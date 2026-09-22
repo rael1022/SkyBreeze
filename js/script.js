@@ -30,6 +30,7 @@
     : document.querySelector('.conversation-list')
       ? ['dialogue-roleplay-01-airport.mp4', 'dialogue-roleplay-02-places.mp4', 'dialogue-roleplay-03-campus.mp4']
       : [];
+  const portraitVideos = new Set(['vocab-student-01.mp4', 'vocab-student-05.mp4']);
 
   function setModalVideo(filename) {
     if (!videoStage) return;
@@ -42,6 +43,9 @@
       player.preload = 'metadata';
       videoStage.append(player);
     }
+    const isPortrait = portraitVideos.has(filename);
+    player.classList.toggle('portrait-video', isPortrait);
+    videoStage.classList.toggle('portrait-stage', isPortrait);
     player.pause();
     player.hidden = true;
     if (videoPlaceholder) videoPlaceholder.hidden = false;
