@@ -37,7 +37,7 @@
       lines: [
         ['tx', '안녕하세요. 서점이 어디에 있어요?', 'tx: Hello. Where is the bookstore?'],
         ['Joseph', '은행 옆에 있어요. 큰 건물이라서 쉽게 찾을 수 있어요.', 'Joseph: It is beside the bank. It is a large building, so you can find it easily.'],
-        ['kw', '서점에서 무엇을 할 거예요?', 'kw: What are you going to do at the bookstore?'],
+        ['kw', '서점에서 뭐 할 거예요?', 'kw: What are you going to do at the bookstore?'],
         ['tx', '저는 친구와 같이 책을 보고 한국어 책도 살 거예요.', 'tx: I am going to look at books with my friend and buy a Korean book too.'],
         ['Joseph', '저도 한국어 책을 사고 싶어요. 한국어 책이 많아요?', 'Joseph: I want to buy a Korean book too. Are there many Korean books?'],
         ['kw', '네, 이 층에 한국어 책이 많이 있어요. 같이 찾아봐요.', 'kw: Yes, there are many Korean books on this floor. Let’s look for them together.'],
